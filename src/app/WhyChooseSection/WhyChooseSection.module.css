@@ -1,0 +1,65 @@
+.section {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #fff;
+}
+
+.title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-left: 13.5rem;
+  position: relative;
+}
+
+.highlight {
+  color: #f67828;
+  margin-left: 0.3rem;
+}
+
+.section h2::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 35px;
+  background-color: #f67828;
+  margin-right: 12px;
+}
+
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.feature {
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature img {
+  width: 50px;
+  margin-bottom: 1rem;
+}
+
+.featureTitle {
+  color: #f67828;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.featureText {
+  color: #666;
+  font-weight: 400;
+  font-size: 0.9rem;
+}

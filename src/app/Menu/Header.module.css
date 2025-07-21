@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  color: black;
+  padding: 1rem 2rem;
+  position: relative; /* necessário para o position absolute do nav */
+}
+
+.nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  margin: 0 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f67828;
+}
+
+.nav a:hover {
+  color: #f67728b9;
+}
+
+.quoteButton {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background-color: #f67828;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.quoteButton:hover {
+  background-color: #e7661c;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
