@@ -1,5 +1,6 @@
 "use client"
 
+import Link from 'next/link'
 import styles from './SobreSection.module.css'
 import Image from 'next/image'
 import sobreImg from '../../../public/sobre.png'
@@ -52,9 +53,9 @@ export default function AboutSection() {
             total segurança e eficiência.
           </p>
 
-          <button className={styles.button}>
+          <Link href="/sobre" className={styles.button}>
             Saiba mais <GoArrowUpRight className={styles.icon} />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

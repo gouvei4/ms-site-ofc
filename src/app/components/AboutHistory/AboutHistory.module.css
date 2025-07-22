@@ -1,0 +1,63 @@
+/* src/app/About/AboutHistory.module.css */
+
+.aboutSection {
+  width: 100%;
+  margin: 0;
+  background-color: #f9f9f9;
+  padding: 2rem 0;
+}
+
+.title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  color: #000;
+  position: relative;
+  padding-left: 16px; /* Espaço para o traço vertical */
+  margin-left: 14.6rem; /* Centraliza melhor o título */
+  margin-top: 1.4rem;
+}
+
+/* Traço vertical antes do título */
+.title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #f67828;
+}
+
+.highlight {
+  color: #f67828;
+  margin-left: 0.5rem;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.textBlock {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  width: 100%;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #7B7D84;
+}
+
+.image {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: auto;
+}
