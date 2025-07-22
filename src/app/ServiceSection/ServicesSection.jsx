@@ -7,40 +7,29 @@ import { GoArrowUpRight } from 'react-icons/go'
 import reformaImG from '../../../public/service1.png'
 import reformaImG2 from '../../../public/service2.png'
 
-function useInView(ref) {
+export default function ServicesSection() {
+  const sectionRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
+        setIsVisible(entry.isIntersecting)
       },
-      { threshold: 0.1 }
+      { threshold: 0.2 }
     )
 
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
+    if (sectionRef.current) observer.observe(sectionRef.current)
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current)
+      if (sectionRef.current) observer.unobserve(sectionRef.current)
     }
-  }, [ref])
-
-  return isVisible
-}
-
-export default function ServicesSection () {
-   const sectionRef = useRef(null)
-  const isVisible = useInView(sectionRef)
+  }, [])
 
   return (
     <section ref={sectionRef} className={styles.section}>
-      <h2 className={styles.title}>
-        <span className={styles.line}></span> Nossos <br />
-        <span className={styles.highlight}> Serviços</span>
+      <h2 className={styles.subtitle}>
+        Nossos <span className={styles.highlight}>Serviços</span>
       </h2>
 
       <div className={`${styles.content} ${isVisible ? styles.fadeIn : ''}`}>

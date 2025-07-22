@@ -1,38 +1,28 @@
 .section {
-  padding: 4rem 2rem;
+  padding: 4rem 1.5rem;
   background-color: #fff;
 }
 
-.title {
+.subtitle {
+  position: relative;
+  padding-left: calc(1.5rem + 12px);
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 36px;
   color: #000;
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  padding-left: 14rem;
-  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
 }
 
-.title .highlight {
-  margin-left: 0.5rem;
-}
-
-.title::before {
+.subtitle::before {
   content: '';
-  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 3px;
-  height: 28px;
+  height: 100%;
+  left: 23px;
   background-color: #f67828;
-  margin-right: 8px;
-}
-
-.line {
-  color: #f67828;
-  font-weight: bold;
-  font-size: 28px;
-  margin-right: 8px;
 }
 
 .highlight {
@@ -41,9 +31,19 @@
 
 .content {
   display: flex;
-  gap: 8.5rem;
+  gap: 7.5rem;
   justify-content: center;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fadeIn {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .item {
@@ -70,7 +70,6 @@
   margin: 0.5rem 0 1rem;
 }
 
-
 .button {
   background-color: #f67828;
   color: white;
@@ -82,9 +81,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  transition: background-color 0.3s;
   font-family: 'Poppins', sans-serif;
-  font-weight: 500;
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
@@ -94,14 +91,20 @@
   box-shadow: 0 8px 15px rgba(0,0,0,0.15);
 }
 
-.content {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1s ease, transform 1s ease;
-}
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
 
-.fadeIn {
-  opacity: 1;
-  transform: translateY(0);
-}
+  .itemDescription {
+    font-size: 0.9rem;
+  }
 
+  .button {
+    width: 100%;
+    justify-content: center;
+  }
+}

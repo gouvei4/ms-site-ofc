@@ -19,7 +19,7 @@ const openSans = Open_Sans({
 
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['400'],
+  weight: ['400', '500', '700'],
 })
 
 export default function RootLayout({

@@ -1,24 +1,40 @@
+"use client"
+
 import styles from './HeroSection.module.css'
 import Image from 'next/image'
 import Header from '../Menu/MenuSection'
 import soldadorImg from '../../../public/soldador.png'
 import setaImg from '../../../public/arrow.png'
-import dotImg from '../../../public/dot.png'
-import dotImgLeft from '../../../public/dot.png'
 import { GoArrowUpRight } from 'react-icons/go'
+import { useEffect, useRef, useState } from 'react'
 
-export default function HeroSection () {
+export default function HeroSection() {
+  const sectionRef = useRef(null)
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting)
+      },
+      { threshold: 0.2 }
+    )
+
+    if (sectionRef.current) observer.observe(sectionRef.current)
+
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current)
+    }
+  }, [])
+
   return (
-    <section className={styles.hero}>
+    <section ref={sectionRef} className={`${styles.hero} ${isVisible ? styles.fadeIn : ''}`}>
       <Header />
       <div className={styles.content}>
-        <div className={`${styles.textBlock} ${styles.fadeInRight}`}>
+        <div className={styles.textBlock}>
           <p className={styles.subtitle}>Olá, somos a MS Manutenções</p>
           <h2 className={styles.title}>
-            Te <span className={styles.highlight}>ajudando</span>{' '}
-            <span className={styles.noBreak}>a superar</span>
-            <br />
-            desafios no dia a dia
+            Te <span className={styles.highlight}>ajudando</span> a superar desafios no dia a dia
           </h2>
 
           <Image src={setaImg} alt='Seta apontando' className={styles.seta} />
@@ -35,7 +51,7 @@ export default function HeroSection () {
           </button>
         </div>
 
-        <div className={`${styles.imageBlock} ${styles.fadeInUp}`}>
+        <div className={styles.imageBlock}>
           <Image src={soldadorImg} alt='Soldador' width={500} height={500} />
         </div>
       </div>
