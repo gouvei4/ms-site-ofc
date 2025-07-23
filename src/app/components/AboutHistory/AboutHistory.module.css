@@ -1,33 +1,30 @@
-/* src/app/About/AboutHistory.module.css */
-
 .aboutSection {
   width: 100%;
-  margin: 0;
-  background-color: #f9f9f9;
-  padding: 2rem 0;
+  background-color: #fff;
 }
 
 .title {
   font-family: 'Open Sans', sans-serif;
   font-size: 36px;
   font-weight: 400;
-  margin-bottom: 2.5rem;
-  display: flex;
-  align-items: center;
+  margin-bottom: 1.2rem;
+  display: block;
   color: #000;
   position: relative;
-  padding-left: 16px; /* Espaço para o traço vertical */
-  margin-left: 14.6rem; /* Centraliza melhor o título */
-  margin-top: 1.4rem;
+  padding-left: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  top: 2rem;
+  transform: translateX(-24.5rem);
+  width: fit-content; 
 }
 
-/* Traço vertical antes do título */
 .title::before {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
-  width: 3px;
+  width: 5px;
   height: 100%;
   background-color: #f67828;
 }
@@ -39,25 +36,83 @@
 
 .content {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  flex-direction: row;
+  gap: 4rem;
   align-items: flex-start;
 }
 
 .textBlock {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  width: 100%;
-  font-size: 18px;
+  flex: 1;
+  font-size: 16px;
   line-height: 1.6;
   color: #7B7D84;
+  position: relative;
+  top: 2rem;
+  flex-basis: 45%;
+}
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  margin-top: 2.2rem;
+  flex-basis: 80%;
 }
 
 .image {
-  width: 100%;
-  border-radius: 8px;
+  width: 694px;
   object-fit: cover;
-  height: auto;
+  margin-bottom: 2rem;
+}
+
+.imageWrapper .textBlock {
+  margin-top: 0;
+  top: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+    transform: none;
+    text-align: left;
+    margin-left: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .textBlock,
+  .imageWrapper {
+    flex-basis: 100%;
+    top: 0;
+  }
+
+  .image {
+    width: 100%;
+    margin: 0 auto 2rem auto;
+  }
 }

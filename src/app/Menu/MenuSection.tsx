@@ -12,8 +12,8 @@ export default function Header() {
       <h1 className={styles.logo}>MS</h1>
 
       <nav className={`${styles.nav} ${menuOpen ? styles.active : ''}`}>
-        <a href="#">Início</a>
-        <a href="#">Sobre</a>
+        <a href="/">Início</a>
+        <a href="/sobre">Sobre</a>
         <a href="#">Serviços</a>
         <a href="#">Clientes</a>
         <a href="#">Contato</a>

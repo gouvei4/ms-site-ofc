@@ -1,0 +1,172 @@
+.section {
+    background: linear-gradient(to bottom, #1e1e1e, #111);
+    text-align: center;
+    color: #fff;
+}
+
+.title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+    display: block;
+    color: #ffffff;
+    position: relative;
+    padding-left: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 2rem;
+    transform: translateX(-18rem);
+    width: fit-content;
+}
+
+.title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #f67828;
+}
+
+.highlight {
+    color: #f67828;
+    margin-left: 0.5rem;
+}
+
+.missionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+    margin: 6rem auto 4rem auto;
+}
+
+.card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 900px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+.icon {
+    font-size: 4rem;
+    color: #f67828;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.card p {
+    color: #ddd;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.card p,
+.cardRight p,
+.text2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+
+.text2 {
+    margin-left: 10rem;
+}
+
+.values {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.cardRight {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 900px;
+    margin-left: 4rem;
+    font-size: 15px;
+}
+
+.cardRight p {
+    flex: 1;
+    text-align: left;
+}
+
+
+.button {
+  background-color: #f67828;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 3rem;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.button:hover {
+      background-color: #e7661c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* ANIMAÇÕES */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .card,
+    .values {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card p,
+    .list {
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .icon {
+        margin: 0 auto;
+    }
+}
