@@ -1,4 +1,7 @@
 import './globals.css'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 import type { Metadata } from 'next'
 import { Inter, Open_Sans, Poppins } from 'next/font/google'
 

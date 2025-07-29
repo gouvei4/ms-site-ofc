@@ -1,21 +1,36 @@
+/* Header principal */
 .header {
-  width: 100%;
-  padding: 1.2rem 2rem;
-  background: white;
-  color: black;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 1.2rem 2rem;
+  background: white;
+  color: black;
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Bloco da logo */
+.left {
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #f67828;
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  margin-left: 1rem; /* ✅ espaçamento leve e responsivo */
+}
+
+/* Bloco do menu */
+.center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
 }
 
 .nav {
@@ -43,6 +58,14 @@
 
 .nav a:hover::after {
   width: 100%;
+}
+
+/* Bloco da direita (botões) */
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .quoteButton {
@@ -74,6 +97,11 @@
 
 /* Responsivo */
 @media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .nav {
     display: none;
     flex-direction: column;
@@ -91,11 +119,20 @@
     display: flex;
   }
 
+  .quoteButton {
+    display: none;
+  }
+
   .menuToggle {
     display: block;
   }
 
-  .quoteButton {
-    display: none;
+  .center {
+    flex: 100%;
+    justify-content: flex-start;
+  }
+
+  .logo {
+    margin-left: 0.5rem;
   }
 }

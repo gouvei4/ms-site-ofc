@@ -1,0 +1,177 @@
+.contatoSection {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.title {
+  font-size: 2.5rem;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 3rem;
+  color: #000;
+  display: block;
+  width: fit-content;
+  position: relative;
+  padding-left: 360px;
+  top: 20px;
+}
+
+.title span {
+  color: #f67828;
+}
+
+.title::before {
+  content: '';
+  position: absolute;
+  left: 340px;
+  width: 5px;
+  height: 100%;
+  background-color: #f67828;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 3rem;
+  flex: 1;
+}
+
+.formBox,
+.infoBox {
+  flex: 1 1 48%;
+}
+
+.formBox h3 {
+  color: #f67828;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  padding-left: 312px;
+}
+
+
+.infoBox h3 {
+  color: #f67828;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.formBox p {
+  margin-bottom: 1.5rem;
+  color: #777;
+  font-size: 0.95rem;
+  padding-left: 312px;
+}
+
+.formBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.formBox form {
+  width: 100%;
+  padding-left: 320px;
+}
+
+.formBox form input,
+.formBox form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.formBox form input,
+.formBox form textarea {
+  color: #333; /* ou #444 para um tom mais suave */
+  background-color: #fff; /* garante que o fundo seja branco */
+}
+
+
+.formBox form button {
+  background-color: #f67828;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.formBox form button:hover {
+  background-color: #e0671f;
+}
+
+.infoBox ul {
+  list-style: none;
+  padding: 0;
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.formBox input::placeholder,
+.formBox textarea::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+
+.infoBox li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  padding: 6px;
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  background-color: #fff;
+}
+
+.mapa {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.mapContainer {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 8px;
+  margin-left: 0px;
+}
+
+.mapFrame {
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
