@@ -10,20 +10,20 @@ export const metadata: Metadata = {
   description: 'Soluções em manutenção e equipamentos.',
 }
 
-const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['500'],
-})
+// const poppins = Poppins({
+//   subsets: ['latin'],
+//   weight: ['500'],
+// })
 
-const openSans = Open_Sans({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-})
+// const openSans = Open_Sans({
+//   subsets: ['latin'],
+//   weight: ['400', '700'],
+// })
 
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-})
+// const inter = Inter({
+//   subsets: ['latin'],
+//   weight: ['400', '500', '700'],
+// })
 
 export default function RootLayout({
   children,

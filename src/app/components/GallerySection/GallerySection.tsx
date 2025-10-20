@@ -1,13 +1,12 @@
 "use client"
 
 import styles from './GallerySection.module.css'
-import Slider from 'react-slick'
+import Slider, { CustomArrowProps } from 'react-slick'
 import Image from 'next/image'
 import { FaArrowRight, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import Footer from '@/app/Footer/Footer'
 
-function PrevArrow(props: any) {
-  const { onClick } = props
+function PrevArrow({ onClick }: CustomArrowProps) {
   return (
     <div className={`${styles.arrow} ${styles.left}`} onClick={onClick}>
       <FaChevronLeft />
@@ -15,8 +14,7 @@ function PrevArrow(props: any) {
   )
 }
 
-function NextArrow(props: any) {
-  const { onClick } = props
+function NextArrow({ onClick }: CustomArrowProps) {
   return (
     <div className={`${styles.arrow} ${styles.right}`} onClick={onClick}>
       <FaChevronRight />
@@ -37,20 +35,16 @@ export default function GallerySection() {
     responsive: [
       {
         breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        }
+        settings: { slidesToShow: 1 }
       },
       {
         breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        }
+        settings: { slidesToShow: 2 }
       }
     ]
   }
 
-  const imagens = [
+  const imagens: string[] = [
     '/ccbv.jpg',
     '/ccbv2.jpg',
     '/ccbv3.jpg',
@@ -61,7 +55,7 @@ export default function GallerySection() {
 
   return (
     <section className={styles.section}>
-            <h2 className={styles.title}>
+      <h2 className={styles.title}>
         <span className={styles.bar}></span> Conheça nossos principais <span className={styles.highlight}>Serviços</span>
       </h2>
 

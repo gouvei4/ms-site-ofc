@@ -3,7 +3,9 @@
 import styles from './Header.module.css'
 import { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
+
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -22,11 +24,10 @@ export default function Header() {
 
   <div className={styles.center}>
     <nav className={`${styles.nav} ${menuOpen ? styles.active : ''}`}>
-      <a href="/">Início</a>
-      <a href="/sobre">Sobre</a>
-      <a href="/servicos">Serviços</a>
-      <a href="#">Clientes</a>
-      <a href="/contato">Contato</a>
+      <Link href="/">Início</Link>
+      <Link href="/sobre">Sobre</Link>
+      <Link href="/servicos">Serviços</Link>
+      <Link href="/contato">Contato</Link>
     </nav>
   </div>
 
